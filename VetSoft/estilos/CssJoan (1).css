@@ -1,0 +1,83 @@
+﻿footer {
+  background: #212529;
+}
+
+.border-0 {
+    border: none;
+}
+
+.collapse {
+  &:not(.show) {
+    display: none;
+  }
+}
+
+.collapsing {
+  height: 0;
+  overflow: hidden;
+  @include transition($transition-collapse);
+
+  &.collapse-horizontal {
+    width: 0;
+    height: auto;
+    @include transition($transition-collapse-width);
+  }
+}
+
+.carousel-inner img {
+    width: 10%;
+    max-height: 720px;
+}
+
+.imagenesCardsHome {
+    width: 100px !important;
+    height: 100px !important;
+}
+
+.carousel{
+	border-radius: 0%;
+	margin: calc(20% + 80px);
+	margin-top: 20px;
+	padding-top: 28px;
+	margin-bottom: 30px;
+	border-radius: 10px;
+}
+
+
+.mapa{
+	border-radius: 0%;
+	
+	margin: calc(20% + 80px);
+	margin-top: 70px;
+	padding-top: 28px;
+	margin-bottom: 30px;
+	border-radius: 10px;
+}
+
+
+/* Form */
+.formularioPassOlvidada{
+
+	border-radius: 0%;
+	margin: calc (20% + 80px);
+	margin-top: 20px;
+	padding-top: 28px;
+	margin-bottom: 30px;
+	border-radius: 10px;
+}
+
+.containerForm {
+    max-width: 500px;
+}
+
+.mb-3 {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-primary {
+	align-self: center;
+}
+
+

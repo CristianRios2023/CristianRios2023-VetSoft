@@ -1,0 +1,64 @@
+body{
+    
+    background-image: url(../img/fondoII.jpg);
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	margin: 0; /* Elimina el margen predeterminado del cuerpo */
+	padding: 0; /* Elimina el relleno predeterminado del cuerpo */
+}
+.columna{
+
+    float: right; /* Hace que las columnas se coloquen una al lado de la otra */
+    width: 30%; /* Ancho de la columna */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde para visualización */
+    box-sizing: border-box; /* Incluye el borde en el ancho y alto */
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 63px;
+    background: #ffffff;;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background-color: #A6CF98;
+}
+
+.navbar {
+    display: flex;
+    margin-right: 10px;
+}
+.navbar a {
+    display: block;
+    padding: 20px 20px;
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.navbar a:hover {
+    background: A6CF98;
+}
+.logo {
+    margin-left: 30px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: rgba(60, 60, 60, 0.979);  /*cambiar color de HOME*/
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.btn{
+    
+    margin-left: 500px;
+}
