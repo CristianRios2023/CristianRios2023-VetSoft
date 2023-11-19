@@ -19,7 +19,7 @@ if (isset($_POST['enviar'])) {
 		$resultado = mysqli_query($conexion,$consulta);
 		if ($resultado) {
 			?>
-			<h3 class="ok"> Te inscribiste Bien!!</h3>
+			<h3 class="ok"> ¡¡Se Registro Correctamente el Turno!! </h3>
 			<?php
 		}else {
 			?>
@@ -28,7 +28,7 @@ if (isset($_POST['enviar'])) {
 		}
 	}	else {
 			?>
-			<h3 class="bad">Completa los campos</h3>
+			<h3 class="bad">Upps!! Completa los campos</h3>
 			<?php
 		}
 
