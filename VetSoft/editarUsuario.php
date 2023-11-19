@@ -13,8 +13,8 @@ if (isset($_POST['guardar'])) {
     $tipoUsuario= $_POST['tipoUsuario'];
     $especialidad= $_POST['especialidad'];
     $localidad= $_POST['localidad'];
-    //echo $nombre." ".$apellido." ". $usuario." ".$contraseña." ".$email." ".$direccion." ".$tel." ".$estado." ". $tipoUsuario." ".$especialidad."  ".$localidad;
-    $sql->bind_param("ssssssiiiiii",$nombre, $apellido, $usuario,$contraseña,$email,$direccion,$tel,$estado, $tipoUsuario,$especialidad,$localidad,$_GET["id_cliente"]);
+    $id= $_POST['cliente_ID'];
+    $sql->bind_param("ssssssiiiiii",$nombre, $apellido, $usuario,$contraseña,$email,$direccion,$tel,$estado, $tipoUsuario,$especialidad,$localidad,$id);
     
     if($sql->execute()) {
         //header("location:admin2.php");
@@ -62,6 +62,16 @@ $sql = $conexion->prepare("SELECT * FROM clientes WHERE id_cliente=?");
         <br>
     <div class="container">
     <form method="post" class="row g-3" action="">
+	<div >
+		<label for="cliente_ID" class="form-label">ID Cliente: </label>
+            	<select name="cliente_ID" class="form-control">
+                <?php
+                    $num=$row['id_cliente'];
+                    $id=$row['id_cliente'];
+                    echo "<option  value =$id>$num</option> ";
+                ?>
+            	</select>
+        </div>
 		<div >
 			<label for="nombre" class="form-label">Nombre Completo</label>
 			<input type="text" class="form-control" name="nombre" value="<?php echo $row["nombre"]?>">
