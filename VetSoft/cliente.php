@@ -109,7 +109,7 @@
                                 while($row = $result->fetch_assoc()) {
                     ?>
                                 <?php
-                                
+                                    if($id_cliente==$row['fk_id_cliente']){
                                     $id=$row["fk_id_cliente"];
                                     $consultaCliente=$conex->query("select * from clientes where id_cliente='$id'");
                                     $datosCliente = $consultaCliente->fetch_assoc();
@@ -123,7 +123,7 @@
                                 <th scope="row"><?php echo $row["fecha"]; ?></th>
                                 <th><a  href="borrarTurnoCliente.php?id=<?php echo $row["id_turno"];?>" class="btn btn-secondary" onclick="return confirm('Desea eliminar?')" type="submit" id="borrar" name="borrar">Borrar</a></th>
                     <?php
-                                
+                                    }  
                             }
                         }
                     ?>
