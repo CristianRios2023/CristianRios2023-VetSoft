@@ -78,7 +78,7 @@
 									</div>
 								</form>
 								<?php
-                                    include("controladorRegistroUsuario.php");
+                                    include("controladorregistrousuario.php");
                                 ?>
 							</div>
 						</div>
