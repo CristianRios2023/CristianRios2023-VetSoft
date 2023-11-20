@@ -10,7 +10,6 @@ session_start();
             $usuario=$_POST["usuario"];
             $contraseña=$_POST["contraseña"];
             $sql=$conexion->query("select * from clientes where usuario='$usuario' and contraseña='$contraseña'");
-            }
             if($datos=$sql->fetch_object()) {
             $nombre = $datos->nombre;
             $_SESSION['nombre'] = $nombre;
@@ -42,7 +41,7 @@ session_start();
             }
             
         }
-    
+    }
     
 
 ?>
